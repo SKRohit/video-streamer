@@ -12,7 +12,7 @@
   <!-- Socket IO
   ================================================== -->
   <script type="text/javascript"
-          src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js">
+          src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js">
   </script>
 
   <!-- Bootstrap CSS
@@ -110,7 +110,7 @@
 
 <body class="tos-bg">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="http://alwaysai.co/" target="_blank"><div class="alwaysai-logos-svg-horizontal-logo-red-black"></div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
@@ -130,28 +130,35 @@
         </li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
   <div class="container" min-width= "1024px" width="100%">
 
     <div class="dash-sub-title">
-      <h1>alwaysAI Video Streamer</h1>
+      <h1>Video Stream</h1>
     </div>
 
     <div class="card-deck">
 
+      
+
+      <div style="width: 80%">
+        <img onclick="enlargeImg()" id="streamer-image" src="">
+        </br>
+        </br>
+        </br>
+        </br>
+        <button onclick="resetImg()">Reset
+        </button>
+      </div>
+
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Output</h5>
+          <h5 class="card-title">TBD</h5>
           <div class="card-scroller">
             <p id="streamer-text"></p>
           </div>
         </div>
       </div>
-
-      <div style="width: 70%">
-        <img id="streamer-image" src="">
-      </div>
-
     </div>
 
 </div>
@@ -193,4 +200,16 @@
       text_elem.innerHTML = msg.text;
     });
   });
+  var img = document.getElementById("streamer-image");
+  function enlargeImg() {
+                img.style.width = "100%";
+                img.style.height = "auto";
+                img.style.transition = "width 0.5s ease";
+            }
+            // Function to reset image dimensions
+            function resetImg() {
+                img.style.width = "60%";
+                img.style.height = "auto";
+                img.style.transition = "width 0.5s ease";
+            }
 </script>
